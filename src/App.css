@@ -6,14 +6,23 @@
   width: 100%;
   height: 100vh;
 }
-button {
+button,
+button:focus,
+button:active,
+button:default {
+  cursor: pointer;
   font-size: 1.6rem;
   color: #282c34;
-  border: 1px solid #61dafb;
+  border: 3px solid #282c34;
+  background: #fff;
   padding: 5px;
   margin: 5px;
+  box-shadow: 5px 5px 5px #282c34;
 }
 
+button:hover {
+  box-shadow: 3px 3px 3px #282c34;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

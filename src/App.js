@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
-function App() {
+import CovidStats from "./CovidStats";
+const App = () => {
   const [counter, setCounter] = useState(0);
   const increment = (val = 1) => setCounter(counter + val);
   const decrement = (val = 1) => setCounter(counter - val);
 
   return (
     <div className="App">
+      <CovidStats />
       <h1>Counter : {counter}</h1>
       <div style={{ display: "block" }}>
         <button onClick={() => increment()}>Increment +1</button>
@@ -16,6 +18,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
