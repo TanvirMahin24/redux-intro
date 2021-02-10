@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  background: rgb(211, 211, 211);
   height: 100vh;
 }
 button,
@@ -18,10 +19,20 @@ button:default {
   padding: 5px;
   margin: 5px;
   box-shadow: 5px 5px 5px #282c34;
+  transition: 0.3s all ease-in-out;
 }
-
+.pr {
+  padding-right: 20px;
+}
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
 button:hover {
+  background: #282c34;
+  color: #fff;
   box-shadow: 3px 3px 3px #282c34;
+  transition: 0.3s all ease-in-out;
 }
 .App-logo {
   height: 40vmin;

@@ -17,35 +17,30 @@ const CovidStats = () => {
       .then((response) => response.text())
       .then((result) => {
         const data = JSON.parse(result);
-        console.log(data);
+        //console.log(data);
         setStat({
           totalConfirmed: data.Global.TotalConfirmed,
           newConfirmed: data.Global.NewConfirmed,
           totalDeath: data.Global.TotalDeaths,
           newDath: data.Global.NewDeaths,
         });
-        //makeTableRow(data);
       })
       .catch((error) => console.log("error", error));
   }, []);
   return (
     <div style={{ paddingBottom: "80px" }}>
       <h1>COVID status</h1>
-      <div
-        className=""
-        style={{ display: "flex", justifyContent: "space-between" }}
-      >
-        <span style={{ paddingRight: "20px" }}>
+      <div className="d-flex">
+        <span className="pr">
           <b>Total Confirmed:</b> {stat.totalConfirmed}
         </span>
-        <span style={{ paddingRight: "20px" }}>
+        <span className="pr">
           <b>New Confirmed:</b> {stat.newConfirmed}
         </span>
-        <span style={{ paddingRight: "20px" }}>
+        <span className="pr">
           <b>Total Death:</b> {stat.totalDeath}
         </span>
-        <span style={{ paddingRight: "20px" }}>
-          {" "}
+        <span className="pr">
           <b>New Death:</b> {stat.newDath}
         </span>
       </div>
